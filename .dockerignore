@@ -1,0 +1,7 @@
+.git
+.gitignore
+docker-compose.yml
+*.log
+*.tmp
+Thumbs.db
+.DS_Store
