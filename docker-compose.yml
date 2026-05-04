@@ -1,9 +1,16 @@
+version: "3.8"
+
 services:
-  web:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    image: php85-website:local
-    ports:
-      - "8080:80"
+  php:
+    image: php-website:local
+    container_name: { { domain_com } }
     restart: unless-stopped
+    volumes:
+      - /opt/docker/{{domain_com}}:/var/www/html
+    networks:
+      - web-network
+
+networks:
+  web-network:
+    external: true
+    name: web-network
