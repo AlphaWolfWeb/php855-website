@@ -3,14 +3,15 @@ version: "3.8"
 services:
   php:
     image: dj:php-website
-    container_name: "{{domain_com}}"
+    container_name: "${DOMAIN_COM}"
     restart: unless-stopped
+    user: 33:33
     volumes:
-      - /opt/docker/{{domain_com}}:/var/www
+      - /opt/docker/${DOMAIN_COM}:/var/www
     networks:
-      - web-network
+      - web_network
 
 networks:
-  web-network:
+  web_network:
     external: true
-    name: web-network
+    name: ${NETWORK:-web_network}
