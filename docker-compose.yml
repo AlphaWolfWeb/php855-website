@@ -5,7 +5,6 @@ services:
     image: alphawolfweb/php855-website:latest
     container_name: "${DOMAIN_COM}"
     restart: unless-stopped
-    user: 33:33
     volumes:
       - /opt/docker/${DOMAIN_COM:-example_com}:/var/www
     networks:
