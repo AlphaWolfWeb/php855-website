@@ -2,11 +2,11 @@ version: "3.8"
 
 services:
   php:
-    image: php-website:local
-    container_name: { { domain_com } }
+    image: dj:php-website
+    container_name: "{{domain_com}}"
     restart: unless-stopped
     volumes:
-      - /opt/docker/{{domain_com}}:/var/www/html
+      - /opt/docker/{{domain_com}}:/var/www
     networks:
       - web-network
 
