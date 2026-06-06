@@ -3,7 +3,7 @@ version: "3.8"
 services:
   php:
     image: alphawolfweb:php855-website
-    container_name: "${DOMAIN_COM:-example_com}"
+    container_name: "${DOMAIN_COM}"
     restart: unless-stopped
     user: 33:33
     volumes:
