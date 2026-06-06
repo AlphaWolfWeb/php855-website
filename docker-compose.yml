@@ -9,9 +9,9 @@ services:
     volumes:
       - /opt/docker/${DOMAIN_COM:-domain_com}:/var/www
     networks:
-      - web_network
+      - proxy
 
 networks:
-  web_network:
+  proxy:
     external: true
-    name: ${NETWORK:-web_network}
+    name: ${NETWORK:-web-network}
