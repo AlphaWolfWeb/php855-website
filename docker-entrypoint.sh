@@ -1,5 +1,5 @@
 #!/bin/sh
-
+ 
 mkdir -p /var/www/public_html
 mkdir -p /var/www/logs
 
