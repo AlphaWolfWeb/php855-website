@@ -3,11 +3,11 @@ version: "3.8"
 services:
   php:
     image: dj:php-website
-    container_name: "${DOMAIN_COM}"
+    container_name: "${DOMAIN_COM:-domain_com}"
     restart: unless-stopped
     user: 33:33
     volumes:
-      - /opt/docker/${DOMAIN_COM}:/var/www
+      - /opt/docker/${DOMAIN_COM:-domain_com}:/var/www
     networks:
       - web_network
 
