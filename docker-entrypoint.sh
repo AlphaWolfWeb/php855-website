@@ -1,10 +1,10 @@
 #!/bin/sh
- 
-mkdir -p /var/www/public_html
+
+mkdir -p /var/www/html
 mkdir -p /var/www/logs
 
-if [ ! -f /var/www/public_html/index.php ]; then
-cat > /var/www/public_html/index.php << 'EOF'
+if [ ! -f /var/www/html/index.php ]; then
+cat > /var/www/html/index.php << 'EOF'
 <?php
 echo "Site is running.";
 EOF
